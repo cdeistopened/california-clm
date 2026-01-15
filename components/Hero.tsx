@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center texture-overlay overflow-hidden">
@@ -10,9 +12,16 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        {/* Small cross */}
+        {/* California CLM Logo */}
         <div className="animate-fade-in mb-8">
-          <span className="text-terracotta text-3xl">&#10013;</span>
+          <Image
+            src="/clm-logo.png"
+            alt="California Catholic Land Movement"
+            width={120}
+            height={160}
+            className="mx-auto"
+            priority
+          />
         </div>
 
         {/* Main headline */}
@@ -52,6 +61,22 @@ export default function Hero() {
             <div className="font-display text-4xl text-forest">50+</div>
             <div className="font-body text-sm text-earth/60 uppercase tracking-wide">Cities</div>
           </div>
+        </div>
+
+        {/* National CLM Link */}
+        <div className="mt-10 animate-fade-in-delay-4">
+          <a
+            href="https://catholiclandmovement.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-earth/60 hover:text-forest font-body text-sm transition-colors"
+          >
+            <span>A chapter of the</span>
+            <span className="font-medium underline">Catholic Land Movement</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
 
