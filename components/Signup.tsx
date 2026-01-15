@@ -15,9 +15,8 @@ export default function Signup() {
     e.preventDefault()
     setStatus('submitting')
 
-    // Using Formspree - replace YOUR_FORM_ID with actual ID
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/mqeeabko', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
